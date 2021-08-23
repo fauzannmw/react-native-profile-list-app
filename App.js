@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
+import Listbox from "./components/Listbox";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View style={styles.titlebox}>
+        <Text style={styles.title}>User</Text>
+      </View>
+      <Listbox />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +18,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
+  },
+  titlebox: {
+    backgroundColor: "#FF6767",
+    padding: 20,
+    paddingTop: 40,
+  },
+  title: {
+    fontSize: 25,
+    color: "white",
   },
 });
